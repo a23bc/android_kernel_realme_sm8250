@@ -658,6 +658,7 @@ struct inode {
 	seqcount_t		i_size_seqcount;
 #endif
 
+#define INODE_STATE_SUS_KSTAT     (1 << 18)
 	/* Misc */
 	unsigned long		i_state;
 	struct rw_semaphore	i_rwsem;

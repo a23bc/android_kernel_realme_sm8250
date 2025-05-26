@@ -12,15 +12,16 @@
 #include <linux/bitops.h>
 #include <linux/mfd/syscon.h>
 #include <linux/msm-bus.h>
-#include <trace/events/power.h>
-
-#define CREATE_TRACE_POINTS
-#include "trace.h"
 
 #include "clk-regmap.h"
 #include "clk-debug.h"
 #include "common.h"
 #include "gdsc-debug.h"
+
+// 最后 include 所有 trace 相关的头
+#include <trace/events/power.h>
+
+#include  "trace/clk_trace.h"
 
 static struct clk_hw *measure;
 
